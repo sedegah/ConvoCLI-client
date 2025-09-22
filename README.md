@@ -1,51 +1,61 @@
-ConvoCLI – Client
+# ConvoCLI Client
 
-A lightweight command-line client for interacting with the ConvoCLI Server
-.
-This client provides a simple, terminal-based interface for sending messages, managing conversations, and testing the server’s REST API.
+The ConvoCLI Client is a lightweight command-line application for interacting with the [ConvoCLI Server](https://github.com/sedegah/ConvoCLI-server).
+It provides a straightforward terminal interface for sending messages, managing conversations, and testing the server’s REST API.
 
- Features
+## Features
 
-Interactive CLI – Send and receive messages directly from your terminal.
+* **Interactive CLI** – Send and receive messages directly from your terminal
+* **Server Integration** – Communicates with the ConvoCLI server over HTTPS
+* **Configurable** – Define server URL, user tokens, and preferences in a single config file
+* **Cross-Platform** – Runs on Linux, macOS, and Windows
 
-Server Integration – Communicates with the ConvoCLI server over HTTPS.
+## Installation
 
-Configurable – Set the server URL, user tokens, and preferences via a single config file.
+1. **Clone the repository**
 
-Cross-platform – Works on Linux, macOS, and Windows.
+   ```bash
+   git clone https://github.com/sedegah/ConvoCLI-client.git
+   cd ConvoCLI-client
+   ```
 
- Installation
-1️ Clone the Repository
-git clone https://github.com/sedegah/ConvoCLI-client.git
-cd ConvoCLI-client
+2. **Set up a virtual environment (Python 3.9+)**
 
-2️ Set Up a Virtual Environment (Python 3.9+)
-python3 -m venv .venv
-source .venv/bin/activate   # Windows: .venv\Scripts\activate
-pip install -r requirements.txt
+   ```bash
+   python3 -m venv .venv
+   source .venv/bin/activate   # On Windows: .venv\Scripts\activate
+   pip install -r requirements.txt
+   ```
 
-Usage
+## Usage
 
 Start the client:
 
+```bash
 python -m convoclient
+```
 
+Common commands:
 
-Available commands (examples):
+```bash
+login            # Authenticate with your API key
+send "Hello!"    # Send a message to the server
+list             # List recent conversations
+exit             # Quit the client
+```
 
-login          # Authenticate with your API key
-send "Hello!"  # Send a message to the server
-list           # List recent conversations
-exit           # Quit the client
+## Configuration
 
-Configuration
+Create a `.env` file or edit `config.yaml` to specify:
 
-Create a .env file or edit config.yaml to set:
-
+```
 SERVER_URL=https://your-server-url
 API_KEY=your_api_key_here
+```
 
-Project Structure
+## Project Structure
+
+```
 ConvoCLI-client/
 ├─ convoclient/
 │  ├─ __main__.py      # Entry point
@@ -54,7 +64,11 @@ ConvoCLI-client/
 │  └─ utils.py         # Helper functions
 ├─ requirements.txt
 └─ README.md
+```
 
+## Author
 
-Author: Kimathi Elikplim Sedegah
-GitHub: @sedegah
+Kimathi Elikplim Sedegah
+GitHub: [@sedegah](https://github.com/sedegah)
+
+---
